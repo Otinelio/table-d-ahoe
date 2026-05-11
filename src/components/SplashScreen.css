@@ -1,0 +1,71 @@
+.splash {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #0D0A08;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.splash--fadeout {
+  animation: splash-fadeout 650ms ease-in forwards;
+}
+
+/* Ember dot */
+.splash__ember {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #C45C1A;
+  opacity: 0;
+  transition: opacity 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.splash__ember--visible {
+  opacity: 1;
+  animation: ember-pulse 250ms ease-in-out;
+}
+
+.splash__ember--glow {
+  box-shadow: 0 0 180px 90px rgba(196, 92, 26, 0.15);
+  transition: box-shadow 500ms ease-out;
+}
+
+/* Content */
+.splash__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.splash__content--visible {
+  opacity: 1;
+}
+
+.splash__logo {
+  height: clamp(80px, 15vw, 120px);
+  width: auto;
+  object-fit: contain;
+  animation: splash-letter 500ms var(--ease-out-expo) forwards;
+}
+
+.splash__subtitle {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.25em;
+  color: #F5EDE3;
+  opacity: 0;
+  animation: splash-letter 400ms ease-out 200ms forwards;
+  margin-top: 8px;
+}

@@ -1,0 +1,16 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.layout__main {
+  flex: 1;
+  padding-bottom: 64px; /* mobile nav height */
+}
+
+@media (min-width: 768px) {
+  .layout__main {
+    padding-bottom: 0;
+  }
+}

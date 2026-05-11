@@ -1,0 +1,157 @@
+/* ═══ ABOUT PAGE ═══ */
+
+.about-hero {
+  padding: 120px 0 80px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .about-hero { padding: 160px 0 100px; }
+}
+
+.about-hero__title {
+  font-size: clamp(40px, 7vw, 80px);
+  margin-bottom: 16px;
+}
+
+.about-hero__subtitle {
+  color: rgba(245, 237, 227, 0.8);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Story */
+.about-story {
+  padding: 80px 0;
+}
+
+.about-story__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+@media (min-width: 768px) {
+  .about-story__inner {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .about-story__text { flex: 0 0 60%; }
+  .about-story__img-wrap { flex: 0 0 40%; }
+}
+
+.about-story__text p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  color: rgba(245, 237, 227, 0.85);
+  line-height: 1.75;
+  margin-bottom: 20px;
+}
+
+.about-story__img-wrap {
+  overflow: hidden;
+  border-radius: 4px;
+  clip-path: polygon(0 0, 100% 0, 92% 100%, 0 100%);
+}
+
+.about-story__img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+/* Values */
+.about-values {
+  padding: 80px 0;
+  background: #3D2F28;
+}
+
+.about-values__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+@media (min-width: 768px) {
+  .about-values__inner {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.about-value-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: center;
+  padding: 24px;
+}
+
+.about-value-card h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  color: #F5EDE3;
+}
+
+/* Maison */
+.about-maison {
+  padding: 80px 0;
+}
+
+.about-maison__card {
+  background: #3D2F28;
+  border-left: 3px solid #C45C1A;
+  border-radius: 0 12px 12px 0;
+  padding: 32px;
+  max-width: 700px;
+}
+
+.about-maison__card h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 32px;
+  color: #F5EDE3;
+  margin-bottom: 16px;
+}
+
+.about-maison__card .text-body {
+  color: rgba(245, 237, 227, 0.8);
+}
+
+/* Marquee */
+.about-marquee {
+  padding: 40px 0;
+  overflow: hidden;
+}
+
+.about-marquee__track {
+  overflow: hidden;
+}
+
+.about-marquee__content {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  animation: marquee 30s linear infinite;
+  width: max-content;
+}
+
+.about-marquee__word {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(36px, 5vw, 48px);
+  color: #F5EDE3;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.about-marquee__word.accent {
+  color: #C45C1A;
+}
+
+.about-marquee__sep {
+  display: inline-block;
+  width: 40px;
+  height: 1px;
+  background: rgba(196, 92, 26, 0.4);
+  margin: 0 20px;
+}

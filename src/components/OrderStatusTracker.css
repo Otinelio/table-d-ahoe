@@ -1,0 +1,116 @@
+.order-tracker {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+}
+
+.order-tracker__card {
+  background: #3D2F28;
+  border-radius: 16px;
+  padding: 20px;
+  border-left: 4px solid #C45C1A;
+  transition: border-color 500ms ease;
+}
+
+.order-tracker__title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 24px;
+  color: #F5EDE3;
+  margin-bottom: 20px;
+}
+
+.order-tracker__timeline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.order-tracker__step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  flex: 1;
+}
+
+.order-tracker__connector {
+  position: absolute;
+  top: 20px;
+  right: 50%;
+  width: 100%;
+  height: 1px;
+  background: rgba(245, 237, 227, 0.2);
+  z-index: 0;
+}
+
+.order-tracker__connector.past {
+  background: #D4A853;
+}
+
+.order-tracker__pill {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(245, 237, 227, 0.3);
+  position: relative;
+  z-index: 1;
+  background: #3D2F28;
+}
+
+.order-tracker__pill.active {
+  color: #C45C1A;
+  background: rgba(196, 92, 26, 0.15);
+  animation: status-pop 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.order-tracker__pill.past {
+  color: #D4A853;
+}
+
+.order-tracker__label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: rgba(245, 237, 227, 0.3);
+}
+
+.order-tracker__label.active {
+  color: #C45C1A;
+}
+
+.order-tracker__label.past {
+  color: #D4A853;
+}
+
+/* BON APPÉTIT */
+.bon-appetit {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #0D0A08;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.bon-appetit__title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 48px;
+  color: #F5EDE3;
+}
+
+.bon-appetit__text {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  color: rgba(245, 237, 227, 0.7);
+}

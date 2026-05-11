@@ -1,0 +1,350 @@
+/* ═══ HOME PAGE ═══ */
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 80px;
+  padding-bottom: 40px;
+  overflow: hidden;
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+@media (min-width: 768px) {
+  .hero__content {
+    flex-direction: row;
+    align-items: center;
+  }
+  .hero__left { flex: 0 0 55%; }
+  .hero__right { flex: 0 0 45%; }
+}
+
+.hero__tagline {
+  margin-bottom: 24px;
+}
+
+.hero__title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(72px, 12vw, 160px);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  line-height: 0.9;
+  color: #F5EDE3;
+}
+
+.hero__title-line {
+  display: block;
+}
+
+.hero__title-accent {
+  color: #C45C1A;
+}
+
+.hero__divider {
+  width: 100px;
+  height: 2px;
+  background: #C45C1A;
+  margin: 32px 0;
+}
+
+.hero__location {
+  margin-bottom: 40px;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero__image-wrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  clip-path: polygon(8% 0, 100% 0, 100% 100%, 0 100%);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+}
+
+.hero__image {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .hero__image { height: 650px; }
+}
+
+@media (min-width: 1400px) {
+  .hero__image { height: 750px; }
+}
+
+.hero__image-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, #0D0A08 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.hero__image-wrap:hover .hero__image {
+  animation: heat-haze 4s ease-in-out infinite;
+}
+
+.hero__arrow {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  animation: arrow-bounce 1.5s ease-in-out infinite;
+}
+
+/* MANIFESTE */
+.manifeste {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.manifeste__quote {
+  margin-bottom: 60px;
+}
+
+.manifeste__cols {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .manifeste__cols {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.manifeste__col {
+  text-align: center;
+}
+
+.manifeste__bar {
+  width: 1px;
+  height: 40px;
+  background: #C45C1A;
+  margin: 0 auto 16px;
+}
+
+.manifeste__col p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  color: rgba(245, 237, 227, 0.8);
+  line-height: 1.6;
+}
+
+/* CARTE SIGNATURE */
+.signature {
+  padding: 80px 0;
+}
+
+.signature__inner h2 {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.signature__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .signature__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.sig-card {
+  background: #3D2F28;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 300ms ease, box-shadow 300ms ease;
+}
+
+.sig-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 20px 50px rgba(196, 92, 26, 0.2);
+}
+
+.sig-card__img-wrap {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+
+.sig-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sig-card__cat {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  background: #C45C1A;
+  color: #F5EDE3;
+  padding: 4px 10px;
+  border-radius: 2px;
+}
+
+.sig-card__body {
+  padding: 20px;
+}
+
+.sig-card__name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  color: #F5EDE3;
+  margin-bottom: 8px;
+}
+
+.sig-card__desc {
+  margin-bottom: 16px;
+}
+
+.sig-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sig-card__btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #C45C1A;
+  color: #F5EDE3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 600;
+  transition: transform 200ms ease, filter 200ms ease;
+}
+
+.sig-card__btn:hover {
+  transform: scale(1.08);
+  filter: brightness(1.1);
+}
+
+/* TRAITEUR */
+.traiteur {
+  padding: 80px 0;
+  background: #3D2F28;
+}
+
+.traiteur__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+@media (min-width: 768px) {
+  .traiteur__inner {
+    flex-direction: row;
+    align-items: center;
+  }
+  .traiteur__text { flex: 0 0 60%; }
+  .traiteur__img-wrap { flex: 0 0 40%; }
+}
+
+.traiteur__text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.traiteur__text .text-body {
+  color: rgba(245, 237, 227, 0.8);
+  max-width: 500px;
+}
+
+.traiteur__img-wrap {
+  overflow: hidden;
+  border-radius: 4px;
+  clip-path: polygon(8% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.traiteur__img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+/* TÉMOIGNAGES */
+.temoignages {
+  padding: 80px 0;
+}
+
+.temoignages__inner h2 {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.temoignages__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .temoignages__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.temo-card {
+  background: #3D2F28;
+  border-radius: 12px;
+  padding: 28px;
+}
+
+.temo-card__text {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-style: italic;
+  color: rgba(245, 237, 227, 0.85);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.temo-card__rating {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.temo-card__dash {
+  width: 20px;
+  height: 2px;
+  background: #C45C1A;
+  border-radius: 1px;
+}
+
+.temo-card__author {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #D4A853;
+}
